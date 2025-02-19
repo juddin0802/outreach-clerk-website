@@ -6,7 +6,9 @@ import {
   BarChart,
   Users,
   Zap,
-  MessageSquare
+  MessageSquare,
+  UserPlus,
+  LayoutDashboard
 } from 'lucide-react';
 import BackgroundSVG from '@/components/BackgroundSVG';
 
@@ -23,24 +25,30 @@ const features = [
   },
   {
     icon: <LinkIcon className='w-8 h-8' />,
-    title: 'Link Building',
+    title: 'Link Building Outreach',
     description: 'Streamline your link building campaigns effectively'
-  },
-  {
-    icon: <Users className='w-8 h-8' />,
-    title: 'Multi Workspace',
-    description: 'Manage multiple teams from a single dashboard'
-  },
-  {
-    icon: <Zap className='w-8 h-8' />,
-    title: 'White Label',
-    description: 'Brand the platform as your own solution'
   },
   {
     icon: <BarChart className='w-8 h-8' />,
     title: 'Advanced Analytics',
     description: 'Track and optimize your campaign performance'
+  },
+  {
+    icon: <UserPlus className='w-8 h-8' />,
+    title: 'Team Collaboration',
+    description: 'Easily invite colleagues and work together in real time'
+  },
+  {
+    icon: <LayoutDashboard className='size-8' />,
+    title: 'Multi Workspace',
+    description:
+      'Manage multiple workspace or project from a single user account'
   }
+  // {
+  //   icon: <Zap className='w-8 h-8' />,
+  //   title: 'White Label',
+  //   description: 'Brand the platform as your own solution'
+  // }
 ];
 
 export default function Home() {
