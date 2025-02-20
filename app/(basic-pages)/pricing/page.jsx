@@ -1,52 +1,68 @@
 import BackgroundSVG from '@/components/BackgroundSVG';
 import { Button } from '@/components/ui/button';
-import { Check } from 'lucide-react';
+import { BadgeCheck, Check, CircleCheckBig } from 'lucide-react';
+import { FaCheck } from 'react-icons/fa';
+import Link from 'next/link';
 
 const plans = [
   {
     name: 'Free Forever',
     price: '$0',
     features: [
-      'Email warmup for 1 account',
-      'Up to 500 cold emails per month',
-      'Basic link building tools',
-      'Email templates',
-      'Standard support'
+      '1 Workspace',
+      '1 Email Warmup',
+      '1 Email Accounts',
+      '100 Emails Months',
+      '100 Uploaded Contacts',
+      '100 Backlink Site Downloads',
+      '100 Link-Building Outreach',
+      'Unlimited Email Templates',
+      'Standard Support'
     ]
   },
   {
-    name: 'Starter',
+    name: 'Starter Plan',
     price: '$29',
     features: [
-      'Email warmup for 1 account',
-      'Up to 500 cold emails per month',
-      'Basic link building tools',
-      'Email templates',
-      'Standard support'
+      '1 Workspace',
+      'Unlimited Email Warmup',
+      'Unlimited Email Accounts',
+      '15 000 Emails Months',
+      '5 000 Uploaded Contacts',
+      'Unlimited Backlink Site Downloads',
+      'Unlimited Link-Building Outreach',
+      'Unlimited Email Templates',
+      'Priority Support'
     ]
   },
   {
-    name: 'Pro',
-    price: '$59',
+    name: 'Pro Plan',
+    price: '$89',
     features: [
-      'Email warmup for 3 accounts',
-      'Up to 2,000 cold emails per month',
-      'Advanced link building tools',
-      'Custom email templates',
-      'Priority support',
-      'API access'
+      '3 Workspaces',
+      'Unlimited Email Warmup',
+      'Unlimited Email Accounts',
+      '125 000 Emails Months',
+      '50 000 Uploaded Contacts',
+      'Unlimited Backlink Site Downloads',
+      'Unlimited Link-Building Outreach',
+      'Unlimited Email Templates',
+      'Priority Support'
     ]
   },
   {
-    name: 'Advance',
-    price: '$119',
+    name: 'Advance Plan',
+    price: '$199',
     features: [
-      'Email warmup for unlimited accounts',
-      'Unlimited cold emails',
-      'Advanced link building suite',
-      'Custom integrations',
-      'Dedicated account manager',
-      'Custom API solutions'
+      '10 Workspaces',
+      'Unlimited Email Warmup',
+      'Unlimited Email Accounts',
+      '300 000 Emails Months',
+      '150 000 Uploaded Contacts',
+      'Unlimited Backlink Site Downloads',
+      'Unlimited Link-Building Outreach',
+      'Unlimited Email Templates',
+      'Priority Support'
     ]
   }
 ];
@@ -63,7 +79,7 @@ export default function Pricing() {
         <h1 className='text-4xl lg:text-5xl xl:text-6xl xxl:text-[64px] leading-[1.2] lg:leading-[77px] font-urbanist font-extrabold text-emerald-800 text-center mb-4'>
           Effortless Pricing for Every Business
         </h1>
-        <p className='text-lg text-center mb-12'>
+        <p className='text-xl text-center text-gray-600 font-urbanist mb-12'>
           Flexible plans designed to fit companies of every size – always
           transparent and predictable.
         </p>
@@ -74,6 +90,7 @@ export default function Pricing() {
               className='bg-zinc-50 p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow'>
               <h2 className='text-2xl font-bold mb-4 text-emerald-800'>
                 {plan.name}
+                <hr />
               </h2>
               <p className='text-3xl font-bold mb-6 text-emerald-800'>
                 {plan.price}
@@ -84,16 +101,23 @@ export default function Pricing() {
               <ul className='mb-8'>
                 {plan.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className='flex items-center mb-2'>
-                    <Check className='h-5 w-5 text-emerald-900 mr-2' />
-                    <span className='text-gray-600'>{feature}</span>
+                    <FaCheck className='size-4 text-emerald-900 mr-2' />
+                    <span className='text-gray-600 text-sm font-urbanist'>
+                      {feature}
+                    </span>
                   </li>
                 ))}
               </ul>
-              <Button
-                variant='outline'
-                className='bg-emerald-800 hover:bg-emerald-900 w-full text-white hover:text-slate-100 font-semibold text-sm'>
-                Get Started
-              </Button>
+              <Link
+                href='https://app.outreachclerk.com/register'
+                target='_blank'
+                rel='noopener noreferrer'>
+                <Button
+                  variant='outline'
+                  className='bg-emerald-800 hover:bg-emerald-900 w-full text-white hover:text-slate-100 font-semibold text-sm'>
+                  Get Started
+                </Button>
+              </Link>
             </div>
           ))}
         </div>
