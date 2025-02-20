@@ -4,10 +4,11 @@ import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className='bg-[#0E322D] py-16 px-6 md:px-12 lg:px-16 border-t border-teal-700'>
+    <footer className='bg-emerald-950 py-16 px-6 md:px-12 lg:px-16 border-t border-teal-700'>
       <div className='container mx-auto px-4'>
         {/* Footer Menus */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 mb-12 mx-auto'>
+          {/* Brand Section */}
           <div>
             <Link href='/' className='block mb-6'>
               <Image
@@ -24,6 +25,7 @@ export default function Footer() {
             </p>
           </div>
 
+          {/* Feature Menus */}
           <div>
             <h4 className='text-white font-bold mb-4 text-[18px]'>
               Quick links
@@ -53,33 +55,56 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Company Policies */}
           <div>
             <h4 className='text-white font-bold mb-4 text-[18px]'>Company</h4>
             <ul className='space-y-3'>
               <li>
                 <Link
-                  href='/terms'
-                  className='font-inter text-[18px] leading-[27px] text-[rgb(211,211,211)] hover:text-white transition-colors'>
-                  Terms and Conditions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href='/privacy'
+                  href='/privacy-policy'
                   className='font-inter text-[18px] leading-[27px] text-[rgb(211,211,211)] hover:text-white transition-colors'>
                   Privacy Policy
                 </Link>
               </li>
               <li>
                 <Link
-                  href='/gdpr'
+                  href='/cookie-policy'
+                  className='font-inter text-[18px] leading-[27px] text-[rgb(211,211,211)] hover:text-white transition-colors'>
+                  Cookie Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/california-consumer-privacy-act'
+                  className='font-inter text-[18px] leading-[27px] text-[rgb(211,211,211)] hover:text-white transition-colors'>
+                  CCPA Compliance
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/general-data-protection-regulation'
                   className='font-inter text-[18px] leading-[27px] text-[rgb(211,211,211)] hover:text-white transition-colors'>
                   GDPR Compliance
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/refund-policy'
+                  className='font-inter text-[18px] leading-[27px] text-[rgb(211,211,211)] hover:text-white transition-colors'>
+                  Refund Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/terms-of-use'
+                  className='font-inter text-[18px] leading-[27px] text-[rgb(211,211,211)] hover:text-white transition-colors'>
+                  Terms of Use
                 </Link>
               </li>
             </ul>
           </div>
 
+          {/* Support Menus */}
           <div>
             <h4 className='text-white font-bold mb-4 text-[18px]'>Support</h4>
             <ul className='space-y-3'>
@@ -123,6 +148,7 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Social Links */}
           <div>
             <h4 className='text-white font-bold mb-4 text-[18px]'>
               Social Links
