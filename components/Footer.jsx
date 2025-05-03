@@ -1,193 +1,135 @@
-import Link from 'next/link';
-import Image from 'next/image';
 import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import WebsiteLogo from './WebsiteLogo';
+import FooterLink from './FooterLink';
 
 export default function Footer() {
   return (
-    <footer className='bg-emerald-950 py-16 px-6 md:px-12 lg:px-16 border-t border-teal-700'>
+    <footer className='bg-[#FAF8F3] py-16 px-6 md:px-12 lg:px-16 border-t border-teal-700'>
       <div className='container mx-auto px-4'>
         {/* Footer Menus */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 mb-12 mx-auto'>
           {/* Brand Section */}
           <div>
-            <Link href='/' className='block mb-6'>
-              <Image
-                src='/outreach-clerk-logo.png'
-                alt='Outreach Clerk Logo'
-                width={180}
-                height={50}
-                className='h-10 w-auto'
-              />
-            </Link>
-            <p className='font-inter text-[18px] leading-[27px] text-[rgb(211,211,211)]'>
+            <WebsiteLogo />
+            <p className='font-inter text-[17px] leading-[27px] text-slate-600 mt-4'>
               Your trusted partner for email outreach and link building
               campaigns.
             </p>
           </div>
 
-          {/* Feature Menus */}
+          {/* Quick links */}
           <div>
-            <h4 className='text-white font-bold mb-4 text-[18px]'>
+            <h4 className='text-indigo-600 font-bold mb-4 text-[18px]'>
               Quick links
             </h4>
             <ul className='space-y-3'>
               <li>
-                <Link
-                  href='/features'
-                  className='font-inter text-[18px] leading-[27px] text-[rgb(211,211,211)] hover:text-white transition-colors'>
-                  Email Warmup
-                </Link>
+                <FooterLink href='/features'>Email Warmup</FooterLink>
               </li>
               <li>
-                <Link
-                  href='/features'
-                  className='font-inter text-[18px] leading-[27px] text-[rgb(211,211,211)] hover:text-white transition-colors'>
-                  Cold Outreach
-                </Link>
+                <FooterLink href='/features'>Cold Outreach</FooterLink>
               </li>
               <li>
-                <Link
-                  href='/features'
-                  className='font-inter text-[18px] leading-[27px] text-[rgb(211,211,211)] hover:text-white transition-colors'>
-                  Link Building
-                </Link>
+                <FooterLink href='/features'>Link Building</FooterLink>
               </li>
             </ul>
           </div>
 
           {/* Company Policies */}
           <div>
-            <h4 className='text-white font-bold mb-4 text-[18px]'>Company</h4>
+            <h4 className='text-indigo-600 font-bold mb-4 text-[18px]'>
+              Company
+            </h4>
             <ul className='space-y-3'>
               <li>
-                <Link
-                  href='/privacy-policy'
-                  className='font-inter text-[18px] leading-[27px] text-[rgb(211,211,211)] hover:text-white transition-colors'>
-                  Privacy Policy
-                </Link>
+                <FooterLink href='/privacy-policy'>Privacy Policy</FooterLink>
               </li>
               <li>
-                <Link
-                  href='/cookie-policy'
-                  className='font-inter text-[18px] leading-[27px] text-[rgb(211,211,211)] hover:text-white transition-colors'>
-                  Cookie Policy
-                </Link>
+                <FooterLink href='/cookie-policy'>Cookie Policy</FooterLink>
               </li>
               <li>
-                <Link
-                  href='/california-consumer-privacy-act'
-                  className='font-inter text-[18px] leading-[27px] text-[rgb(211,211,211)] hover:text-white transition-colors'>
+                <FooterLink href='/california-consumer-privacy-act'>
                   CCPA Compliance
-                </Link>
+                </FooterLink>
               </li>
               <li>
-                <Link
-                  href='/general-data-protection-regulation'
-                  className='font-inter text-[18px] leading-[27px] text-[rgb(211,211,211)] hover:text-white transition-colors'>
+                <FooterLink href='/general-data-protection-regulation'>
                   GDPR Compliance
-                </Link>
+                </FooterLink>
               </li>
               <li>
-                <Link
-                  href='/refund-policy'
-                  className='font-inter text-[18px] leading-[27px] text-[rgb(211,211,211)] hover:text-white transition-colors'>
-                  Refund Policy
-                </Link>
+                <FooterLink href='/refund-policy'>Refund Policy</FooterLink>
               </li>
               <li>
-                <Link
-                  href='/terms-of-use'
-                  className='font-inter text-[18px] leading-[27px] text-[rgb(211,211,211)] hover:text-white transition-colors'>
-                  Terms of Use
-                </Link>
+                <FooterLink href='/terms-of-use'>Terms of Use</FooterLink>
               </li>
             </ul>
           </div>
 
           {/* Support Menus */}
           <div>
-            <h4 className='text-white font-bold mb-4 text-[18px]'>Support</h4>
+            <h4 className='text-indigo-600 font-bold mb-4 text-[18px]'>
+              Support
+            </h4>
             <ul className='space-y-3'>
               <li>
-                <Link
-                  href='https://roadmap.outreachclerk.com/t/roadmap'
-                  className='font-inter text-[18px] leading-[27px] text-[rgb(211,211,211)] hover:text-white transition-colors'>
+                <FooterLink href='https://roadmap.outreachclerk.com/t/roadmap'>
                   Road Map
-                </Link>
+                </FooterLink>
               </li>
-
               <li>
-                <Link
-                  href='https://roadmap.outreachclerk.com/'
-                  className='font-inter text-[18px] leading-[27px] text-[rgb(211,211,211)] hover:text-white transition-colors'>
+                <FooterLink href='https://roadmap.outreachclerk.com/'>
                   Knowledge Base
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href='/Facebook-Group'
-                  className='font-inter text-[18px] leading-[27px] text-[rgb(211,211,211)] hover:text-white transition-colors'>
-                  Facebook Group
-                </Link>
+                </FooterLink>
               </li>
               <li>
-                <Link
-                  href='/youtube'
-                  className='font-inter text-[18px] leading-[27px] text-[rgb(211,211,211)] hover:text-white transition-colors'>
-                  Youtube Channel
-                </Link>
+                <FooterLink href='/Facebook-Group'>Facebook Group</FooterLink>
               </li>
               <li>
-                <Link
-                  href='/contact'
-                  className='font-inter text-[18px] leading-[27px] text-[rgb(211,211,211)] hover:text-white transition-colors'>
-                  Contact Support
-                </Link>
+                <FooterLink href='/youtube'>Youtube Channel</FooterLink>
+              </li>
+              <li>
+                <FooterLink href='/contact'>Contact Support</FooterLink>
               </li>
             </ul>
           </div>
 
           {/* Social Links */}
           <div>
-            <h4 className='text-white font-bold mb-4 text-[18px]'>
+            <h4 className='text-indigo-600 font-bold mb-4 text-[18px]'>
               Social Links
             </h4>
             <div className='flex space-x-4'>
-              <Link
+              <FooterLink
                 href='https://www.facebook.com/OutreachClerk'
                 target='_blank'
-                rel='noopener noreferrer'
-                className='text-[rgb(211,211,211)] hover:text-white transition-colors'>
-                <Facebook className='h-6 w-6' />
-              </Link>
-              <Link
+                rel='noopener noreferrer'>
+                <Facebook className='size-6 hover:text-indigo-500' />
+              </FooterLink>
+              <FooterLink
                 href='https://twitter.com/OutreachClerk/'
                 target='_blank'
-                rel='noopener noreferrer'
-                className='text-[rgb(211,211,211)] hover:text-white transition-colors'>
-                <Twitter className='h-6 w-6' />
-              </Link>
-              <Link
+                rel='noopener noreferrer'>
+                <Twitter className='size-6 hover:text-indigo-500' />
+              </FooterLink>
+              <FooterLink
                 href='https://www.instagram.com/outreachclerk/'
                 target='_blank'
-                rel='noopener noreferrer'
-                className='text-[rgb(211,211,211)] hover:text-white transition-colors'>
-                <Instagram className='h-6 w-6' />
-              </Link>
-              <Link
+                rel='noopener noreferrer'>
+                <Instagram className='size-6 hover:text-indigo-500' />
+              </FooterLink>
+              <FooterLink
                 href='https://www.linkedin.com/company/outreachclerk/'
                 target='_blank'
-                rel='noopener noreferrer'
-                className='text-[rgb(211,211,211)] hover:text-white transition-colors'>
-                <Linkedin className='h-6 w-6' />
-              </Link>
+                rel='noopener noreferrer'>
+                <Linkedin className='size-6 hover:text-indigo-500' />
+              </FooterLink>
             </div>
           </div>
         </div>
 
         {/* Copyright Text */}
-        <div className='text-center font-inter text-[18px] leading-[27px] text-[rgb(211,211,211)]'>
+        <div className='text-center font-inter text-[18px] leading-[27px] text-indigo-600'>
           © {new Date().getFullYear()} Outreach Clerk. All rights reserved.
         </div>
       </div>
