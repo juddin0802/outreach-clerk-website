@@ -18,7 +18,10 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: 'Outreach Clerk - Cold Email & Link Building Outreach Platform',
   description:
-    'Outreach Clerk is your all-in-one solution for email warmup, cold email outreach, and link building campaigns.'
+    'Outreach Clerk is your all-in-one solution for email warmup, cold email outreach, and link building campaigns.',
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+  }
 };
 
 export default function RootLayout({ children }) {
@@ -31,7 +34,7 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
         <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+        {/* <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} /> */}
       </body>
     </html>
   );
