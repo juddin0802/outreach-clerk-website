@@ -10,7 +10,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className='py-4 px-6 md:px-12 lg:px-16 bg-[#FAF8F3]'>
+    <header className='py-4 px-6 md:px-12 lg:px-16 bg-[#FAF8F3] sticky top-0 z-50'>
       <div className='container mx-auto px-4'>
         <div className='flex items-center justify-between'>
           <WebsiteLogo />
@@ -51,7 +51,7 @@ export default function Header() {
               target='_blank'
               onClick={() => setMenuOpen(false)}
               className='block md:inline-block'>
-              <Button className='bg-indigo-600 hover:bg-slate-700 text-xs md:text-sm lg:text-base text-white font-bold py-4 md:py-2 px-6 rounded-3xl transition-colors'>
+              <Button className='bg-indigo-600 hover:bg-slate-700 text-xs md:text-sm lg:text-base text-slate-50 font-bold py-4 md:py-2 px-6 rounded-3xl transition-colors'>
                 Get Started for Free!
               </Button>
             </Link>

@@ -7,7 +7,7 @@ import {
   Zap,
   MessageSquare
 } from 'lucide-react';
-import BackgroundSVG from '@/components/BackgroundSVG';
+import BackgroundSVG from '@/components/bg-svgs/BackgroundSVG';
 
 const features = [
   {
@@ -64,7 +64,7 @@ export default function Features() {
       </div>
 
       <div className='relative container mx-auto px-4'>
-        <h1 className='text-4xl lg:text-5xl xl:text-6xl xxl:text-[64px] leading-[1.2] lg:leading-[77px] font-urbanist font-extrabold text-emerald-800 text-center mb-12'>
+        <h1 className='text-4xl lg:text-5xl xl:text-6xl xxl:text-[64px] leading-[1.2] lg:leading-[77px] font-urbanist font-extrabold text-slate-800 text-center mb-12'>
           Our Powerful Features
         </h1>
         <div className='space-y-20'>
@@ -85,12 +85,12 @@ export default function Features() {
               </div>
               <div className='w-full md:w-1/2'>
                 <div className='flex items-center mb-4'>
-                  <span className='text-emerald-900'>{feature.icon}</span>
-                  <h2 className='text-2xl font-bold text-emerald-900 ml-4 text-brand-red'>
+                  <span className='text-indigo-600'>{feature.icon}</span>
+                  <h2 className='text-3xl font-bold text-indigo-600 ml-4 text-brand-red'>
                     {feature.name}
                   </h2>
                 </div>
-                <p className='text-gray-600'>{feature.description}</p>
+                <p className='text-slate-600'>{feature.description}</p>
               </div>
             </div>
           ))}

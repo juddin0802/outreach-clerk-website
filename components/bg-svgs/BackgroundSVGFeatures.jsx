@@ -1,4 +1,7 @@
-const BackgroundSVG = () => {
+// components/BackgroundSVGFeatures.jsx
+import React from 'react';
+
+const BackgroundSVGFeatures = () => {
   return (
     <svg
       width='100%'
@@ -7,12 +10,16 @@ const BackgroundSVG = () => {
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
       preserveAspectRatio='xMidYMid slice'>
-      <g opacity='0.5'>
+      <g opacity='0.4'>
+        {' '}
+        {/* Reduced opacity for subtlety */}
         <g filter='url(#filter0_f_478_4455)'>
-          <circle cx='491.5' cy='738.5' r='146.5' fill='#00FF84' />
+          <circle cx='600.5' cy='600.5' r='146.5' fill='#A3E4D7' />{' '}
+          {/* Lighter green */}
         </g>
-        <g opacity='0.5' filter='url(#filter1_f_478_4455)'>
-          <circle cx='228.5' cy='259.5' r='146.5' fill='#F7700F' />
+        <g opacity='0.4' filter='url(#filter1_f_478_4455)'>
+          <circle cx='300.5' cy='400.5' r='146.5' fill='#FDBA74' />{' '}
+          {/* Softer orange */}
         </g>
       </g>
       <defs>
@@ -61,4 +68,4 @@ const BackgroundSVG = () => {
   );
 };
 
-export default BackgroundSVG;
+export default BackgroundSVGFeatures;

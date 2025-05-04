@@ -30,6 +30,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
+        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
       </body>
     </html>

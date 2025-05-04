@@ -4,7 +4,7 @@ import FooterLink from './FooterLink';
 
 export default function Footer() {
   return (
-    <footer className='bg-[#FAF8F3] py-16 px-6 md:px-12 lg:px-16 border-t border-teal-700'>
+    <footer className='bg-[#FAF8F3] py-16 px-6 md:px-12 lg:px-16'>
       <div className='container mx-auto px-4'>
         {/* Footer Menus */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 mb-12 mx-auto'>
@@ -22,7 +22,7 @@ export default function Footer() {
             <h4 className='text-indigo-600 font-bold mb-4 text-[18px]'>
               Quick links
             </h4>
-            <ul className='space-y-3'>
+            <ul className='space-y-1'>
               <li>
                 <FooterLink href='/features'>Email Warmup</FooterLink>
               </li>
@@ -40,7 +40,7 @@ export default function Footer() {
             <h4 className='text-indigo-600 font-bold mb-4 text-[18px]'>
               Company
             </h4>
-            <ul className='space-y-3'>
+            <ul className='space-y-1'>
               <li>
                 <FooterLink href='/privacy-policy'>Privacy Policy</FooterLink>
               </li>
@@ -71,7 +71,7 @@ export default function Footer() {
             <h4 className='text-indigo-600 font-bold mb-4 text-[18px]'>
               Support
             </h4>
-            <ul className='space-y-3'>
+            <ul className='space-y-1'>
               <li>
                 <FooterLink href='https://roadmap.outreachclerk.com/t/roadmap'>
                   Road Map
